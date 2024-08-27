@@ -2,6 +2,7 @@
 import { Play, Square } from 'lucide-vue-next'
 
 import ActionButton from '@/components/ui/ActionButton.vue'
+import TimerClock from '@/components/ui/TimerClock.vue'
 
 export default {
   name: 'TopBar',
@@ -9,6 +10,7 @@ export default {
     ActionButton,
     Play,
     Square,
+    TimerClock,
   },
   data() {
     return {
@@ -16,11 +18,6 @@ export default {
       interval: 0,
       isRunning: false,
     }
-  },
-  computed: {
-    formattedTimer() {
-      return new Date(this.timer * 1000).toISOString().substr(11, 8)
-    },
   },
   methods: {
     startTimer() {
@@ -45,7 +42,7 @@ export default {
         class="block flex-1 rounded border-0 bg-transparent px-2 py-1 text-zinc-900 outline-none ring-zinc-300 transition-all hover:ring-1 focus:ring-1 focus:ring-indigo-600"
         placeholder="No que você está trabalhando?"
       />
-      <strong class="w-[68px] font-medium text-zinc-800">{{ formattedTimer }}</strong>
+      <TimerClock :timer="timer" />
       <ActionButton v-if="isRunning" variant="secondary" @click="stopTimer">
         <Square :size="16" />
         Parar
