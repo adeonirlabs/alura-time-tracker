@@ -1,5 +1,5 @@
 <script lang="ts">
-import AppLogo from '@/components/AppLogo.vue'
+import AppLogo from '@/components/ui/AppLogo.vue'
 
 export default {
   name: 'SideBar',
@@ -10,8 +10,8 @@ export default {
 </script>
 
 <template>
-  <header class="bg-indigo-900 h-auto md:h-screen w-full p-10 md:p-4">
-    <h1>
+  <header class="h-auto w-full bg-indigo-900 p-6 md:h-screen">
+    <h1 class="overflow-hidden rounded-lg shadow">
       <AppLogo />
     </h1>
   </header>
