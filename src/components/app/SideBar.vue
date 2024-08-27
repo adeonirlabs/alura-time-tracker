@@ -10,8 +10,8 @@ export default {
 </script>
 
 <template>
-  <aside class="h-auto w-full bg-indigo-900 p-6 md:h-screen">
-    <h1 class="overflow-hidden rounded-lg shadow">
+  <aside class="h-auto w-full border-r border-accent-foreground/10 bg-accent p-6 md:h-screen">
+    <h1 class="overflow-hidden rounded-lg shadow-lg">
       <AppLogo />
     </h1>
   </aside>

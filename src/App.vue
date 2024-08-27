@@ -27,7 +27,7 @@ export default {
 <template>
   <main class="grid grid-cols-1 md:grid-cols-[16rem_1fr]">
     <SideBar />
-    <div class="bg-zinc-200">
+    <div class="bg-muted">
       <TopBar @add-task="addTask" />
       <MainContent :tasks="tasks" />
     </div>

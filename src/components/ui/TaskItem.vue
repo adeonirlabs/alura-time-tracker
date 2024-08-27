@@ -20,9 +20,9 @@ export default {
 </script>
 
 <template>
-  <div class="flex items-center justify-between gap-3 border-b border-zinc-200 px-4 py-3">
-    <p class="text-zinc-800">{{ task.description }}</p>
-    <!-- <p class="ml-auto text-zinc-800">09:34 - 10:51</p> -->
-    <p class="font-medium text-zinc-800">{{ formattedTimer }}</p>
+  <div class="flex items-center justify-between gap-3 border-b border-muted px-4 py-3">
+    <p class="text-foreground">{{ task.description }}</p>
+    <!-- <p class="ml-auto text-foreground">09:34 - 10:51</p> -->
+    <p class="font-medium text-foreground">{{ formattedTimer }}</p>
   </div>
 </template>

@@ -12,8 +12,10 @@ export default {
   computed: {
     buttonClass() {
       return {
-        'bg-indigo-600 hover:not:disabled:bg-indigo-700 focus-visible:outline-indigo-600': this.variant === 'primary',
-        'bg-red-600 hover:not:disabled:bg-red-700 focus-visible:outline-red-600': this.variant === 'secondary',
+        'bg-primary text-primary-foreground hover:not:disabled:bg-primary/90 focus-visible:outline-primary':
+          this.variant === 'primary',
+        'bg-destructive text-destructive-foreground hover:not:disabled:bg-destructive/90 focus-visible:outline-destructive':
+          this.variant === 'secondary',
       }
     },
   },
@@ -23,7 +25,7 @@ export default {
 <template>
   <button
     :class="buttonClass"
-    class="flex w-24 items-center justify-center gap-2 rounded p-2 text-sm font-medium text-white shadow-sm transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:opacity-70"
+    class="flex w-24 items-center justify-center gap-2 rounded p-2 text-sm font-medium shadow-sm transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:opacity-70"
     v-bind="$attrs"
   >
     <slot />
