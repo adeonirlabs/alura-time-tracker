@@ -10,9 +10,9 @@ export default {
 </script>
 
 <template>
-  <header class="h-auto w-full bg-indigo-900 p-6 md:h-screen">
+  <aside class="h-auto w-full bg-indigo-900 p-6 md:h-screen">
     <h1 class="overflow-hidden rounded-lg shadow">
       <AppLogo />
     </h1>
-  </header>
+  </aside>
 </template>
