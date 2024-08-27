@@ -1,36 +1,23 @@
 <script lang="ts">
-import { Play, Square } from 'lucide-vue-next'
-
-import ActionButton from '@/components/ui/ActionButton.vue'
+import TimerController from '@/components/app/TimerController.vue'
 import InputField from '@/components/ui/InputField.vue'
-import TimerClock from '@/components/ui/TimerClock.vue'
 
 export default {
   name: 'TopBar',
   components: {
-    ActionButton,
     InputField,
-    Play,
-    Square,
-    TimerClock,
+    TimerController,
   },
   data() {
     return {
-      timer: 0,
-      interval: 0,
-      isRunning: false,
+      description: '',
     }
   },
   methods: {
-    startTimer() {
-      this.isRunning = true
-      this.interval = setInterval(() => {
-        this.timer++
-      }, 1000)
-    },
-    stopTimer() {
-      this.isRunning = false
-      clearInterval(this.interval)
+    stopTimer(timer: number) {
+      console.log('Timer stopped:', timer)
+      console.log('Description:', this.description)
+      this.description = ''
     },
   },
 }
@@ -39,16 +26,8 @@ export default {
 <template>
   <header class="w-full p-6">
     <div class="flex items-center gap-8 rounded-lg bg-white p-3 shadow">
-      <InputField placeholder="No que você está trabalhando?" />
-      <TimerClock :timer="timer" />
-      <ActionButton v-if="isRunning" variant="secondary" @click="stopTimer">
-        <Square :size="16" />
-        Parar
-      </ActionButton>
-      <ActionButton v-else variant="primary" @click="startTimer">
-        <Play :size="16" />
-        Iniciar
-      </ActionButton>
+      <InputField v-model="description" placeholder="No que você está trabalhando?" />
+      <TimerController @stop-timer="stopTimer" />
     </div>
   </header>
 </template>
