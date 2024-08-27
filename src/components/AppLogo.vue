@@ -5,6 +5,7 @@ export default {
 </script>
 
 <template>
+  <!-- eslint-disable vue/max-attributes-per-line -->
   <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 286 129">
     <rect width="286" height="129" rx="12" fill="#fff" />
     <mask id="a" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="12" y="12" width="105" height="105">

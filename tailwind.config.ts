@@ -1,10 +1,7 @@
 import type { Config } from 'tailwindcss'
 
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{vue,js,ts,jsx,tsx}",
-  ],
+  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
@@ -21,7 +18,7 @@ export default {
           900: '#782b0f',
           950: '#451403',
         },
-      }
+      },
     },
   },
   plugins: [],
