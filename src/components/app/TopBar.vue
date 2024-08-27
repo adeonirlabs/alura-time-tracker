@@ -14,6 +14,11 @@ export default {
       description: '',
     }
   },
+  computed: {
+    isDescriptionEmpty() {
+      return this.description.trim() === ''
+    },
+  },
   methods: {
     stopTimer(timer: number) {
       this.$emit('add-task', {
@@ -31,7 +36,7 @@ export default {
   <header class="w-full p-6">
     <div class="flex items-center gap-8 rounded-lg bg-white p-3 shadow">
       <InputField v-model="description" placeholder="No que você está trabalhando?" />
-      <TimerController @stop-timer="stopTimer" />
+      <TimerController :disabled="isDescriptionEmpty" @stop-timer="stopTimer" />
     </div>
   </header>
 </template>

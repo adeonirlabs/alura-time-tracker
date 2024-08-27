@@ -12,6 +12,12 @@ export default {
     Square,
     TimerClock,
   },
+  props: {
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
+  },
   emits: ['stop-timer'],
   data() {
     return {
@@ -39,7 +45,7 @@ export default {
 
 <template>
   <TimerClock :timer="timer" />
-  <ActionButton v-if="isRunning" variant="secondary" @click="stopTimer">
+  <ActionButton v-if="isRunning" variant="secondary" :disabled="disabled" @click="stopTimer">
     <Square :size="16" />
     Parar
   </ActionButton>
