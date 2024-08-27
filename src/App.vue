@@ -1,10 +1,12 @@
 <script lang="ts">
+import MainContent from '@/components/app/MainContent.vue'
 import SideBar from '@/components/app/SideBar.vue'
 import TopBar from '@/components/app/TopBar.vue'
 
 export default {
   name: 'App',
   components: {
+    MainContent,
     SideBar,
     TopBar,
   },
@@ -16,7 +18,7 @@ export default {
     <SideBar />
     <div class="bg-zinc-200">
       <TopBar />
-      <div class="p-6">Content</div>
+      <MainContent />
     </div>
   </main>
 </template>
