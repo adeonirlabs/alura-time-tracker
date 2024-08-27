@@ -17,7 +17,7 @@
     "vue": "^3.4.38"
   },
   "devDependencies": {
-    "@forgedev-br/eslint-config": "^2.0.2",
+    "@forgedev-br/eslint-config": "^2.0.3",
     "@tsconfig/node20": "^20.1.4",
     "@types/node": "^22.5.0",
     "@vitejs/plugin-vue": "^5.1.2",
