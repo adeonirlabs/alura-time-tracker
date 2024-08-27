@@ -8,6 +8,7 @@ export default {
     InputField,
     TimerController,
   },
+  emits: ['add-task'],
   data() {
     return {
       description: '',
@@ -15,8 +16,11 @@ export default {
   },
   methods: {
     stopTimer(timer: number) {
-      console.log('Timer stopped:', timer)
-      console.log('Description:', this.description)
+      this.$emit('add-task', {
+        id: Date.now(),
+        description: this.description,
+        timer,
+      })
       this.description = ''
     },
   },
