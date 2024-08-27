@@ -20,16 +20,31 @@ export default {
     addTask(task: Task) {
       this.tasks.push(task)
     },
+    toggleTheme() {
+      const root = document.documentElement
+
+      root.classList.add('no-transition')
+      root.classList.toggle('dark')
+      setTimeout(() => {
+        root.classList.remove('no-transition')
+      }, 0)
+    },
   },
 }
 </script>
 
 <template>
   <main class="grid grid-cols-1 md:grid-cols-[16rem_1fr]">
-    <SideBar />
+    <SideBar @toggle-dark-mode="toggleTheme" />
     <div class="bg-muted">
       <TopBar @add-task="addTask" />
       <MainContent :tasks="tasks" />
     </div>
   </main>
 </template>
+
+<style>
+.no-transition * {
+  transition: none !important;
+}
+</style>
