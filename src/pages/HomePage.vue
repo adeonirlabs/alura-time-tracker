@@ -23,8 +23,10 @@ export default {
 </script>
 
 <template>
-  <TopBar @add-task="addTask" />
-  <section class="p-6 pt-0">
-    <TaskList :tasks="tasks" />
-  </section>
+  <div class="flex flex-col gap-6 p-6">
+    <TopBar @add-task="addTask" />
+    <section>
+      <TaskList :tasks="tasks" />
+    </section>
+  </div>
 </template>
