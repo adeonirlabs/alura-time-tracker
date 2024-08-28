@@ -1,8 +1,12 @@
 import { createMemoryHistory, createRouter, type RouteRecordRaw } from 'vue-router'
 
 import HomePage from '@/pages/HomePage.vue'
+import ProjectsPage from '@/pages/ProjectsPage.vue'
 
-const routes: RouteRecordRaw[] = [{ path: '/', name: 'Home', component: HomePage }]
+const routes: RouteRecordRaw[] = [
+  { path: '/', component: HomePage },
+  { path: '/projects', component: ProjectsPage },
+]
 
 export const router = createRouter({
   history: createMemoryHistory(),
