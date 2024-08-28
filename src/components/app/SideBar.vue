@@ -1,25 +1,17 @@
 <script lang="ts">
-import { Moon, Sun } from 'lucide-vue-next'
-
 import AppLogo from '@/components/ui/AppLogo.vue'
+import ToggleTheme from '@/components/ui/ToggleTheme.vue'
 
 export default {
   name: 'SideBar',
   components: {
     AppLogo,
-    Moon,
-    Sun,
+    ToggleTheme,
   },
-  emits: ['toggleDarkMode'],
-  data() {
-    return {
-      isDarkMode: false,
-    }
-  },
+  emits: ['toggle-theme'],
   methods: {
-    toggleDarkMode() {
-      this.isDarkMode = !this.isDarkMode
-      this.$emit('toggleDarkMode')
+    toggleTheme() {
+      this.$emit('toggle-theme')
     },
   },
 }
@@ -32,9 +24,8 @@ export default {
     <h1 class="overflow-hidden rounded-lg shadow-lg">
       <AppLogo />
     </h1>
-    <button v-if="isDarkMode" class="text-foreground" title="Mudar para o tema escuro" @click="toggleDarkMode">
-      <Sun />
-    </button>
-    <button v-else class="text-background" title="Mudar para o tema claro" @click="toggleDarkMode"><Moon /></button>
+    <footer>
+      <ToggleTheme @toggle-theme="toggleTheme" />
+    </footer>
   </aside>
 </template>

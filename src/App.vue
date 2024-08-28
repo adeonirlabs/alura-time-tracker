@@ -25,7 +25,7 @@ export default {
 
 <template>
   <div class="grid grid-cols-1 md:grid-cols-[16rem_1fr]">
-    <SideBar @toggle-dark-mode="toggleTheme" />
+    <SideBar @toggle-theme="toggleTheme" />
     <main class="bg-muted">
       <RouterView />
     </main>
