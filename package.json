@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "lucide-vue-next": "^0.436.0",
-    "vue": "^3.4.38"
+    "vue": "^3.4.38",
+    "vue-router": "^4.4.3"
   },
   "devDependencies": {
     "@forgedev-br/eslint-config": "^2.0.3",
