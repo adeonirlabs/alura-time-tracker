@@ -1,13 +1,13 @@
 <script lang="ts">
+import MainNavigation from '@/components/app/MainNavigation.vue'
+import ToggleTheme from '@/components/app/ToggleTheme.vue'
 import AppLogo from '@/components/ui/AppLogo.vue'
-import AppNavigation from '@/components/ui/AppNavigation.vue'
-import ToggleTheme from '@/components/ui/ToggleTheme.vue'
 
 export default {
   name: 'SideBar',
   components: {
     AppLogo,
-    AppNavigation,
+    MainNavigation,
     ToggleTheme,
   },
   emits: ['toggle-theme'],
@@ -27,7 +27,7 @@ export default {
       <h1 class="overflow-hidden rounded-lg shadow-lg">
         <AppLogo aria-label="Time Tracker" />
       </h1>
-      <AppNavigation />
+      <MainNavigation />
     </header>
     <footer>
       <ToggleTheme @toggle-theme="toggleTheme" />

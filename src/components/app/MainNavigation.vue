@@ -14,7 +14,7 @@ export default {
 
 <template>
   <nav class="flex flex-1 flex-col">
-    <ul role="list" class="-mx-2 space-y-1">
+    <div class="-mx-2 space-y-1">
       <RouterLink
         active-class="bg-background/10"
         class="flex items-center gap-2 rounded-lg px-3 py-2 text-foreground hover:bg-background/10"
@@ -22,6 +22,9 @@ export default {
       >
         <LayoutList :size="16" />Tarefas
       </RouterLink>
+      <div class="pt-4">
+        <span class="text-xs font-medium uppercase text-foreground/70">Gerenciar</span>
+      </div>
       <RouterLink
         active-class="bg-background/10"
         class="flex items-center gap-2 rounded-lg px-3 py-2 text-foreground hover:bg-background/10"
@@ -29,6 +32,6 @@ export default {
       >
         <FolderGit2 :size="16" /> Projetos
       </RouterLink>
-    </ul>
+    </div>
   </nav>
 </template>

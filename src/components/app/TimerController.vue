@@ -1,8 +1,8 @@
 <script lang="ts">
 import { Play, Square } from 'lucide-vue-next'
 
+import TimerClock from '@/components/app/TimerClock.vue'
 import ActionButton from '@/components/ui/ActionButton.vue'
-import TimerClock from '@/components/ui/TimerClock.vue'
 
 export default {
   name: 'TimerController',

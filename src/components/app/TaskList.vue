@@ -1,7 +1,7 @@
 <script lang="ts">
 import type { PropType } from 'vue'
 
-import TaskItem from '@/components/ui/TaskItem.vue'
+import TaskItem from '@/components/app/TaskItem.vue'
 import type { Task } from '@/types/task'
 
 export default {
