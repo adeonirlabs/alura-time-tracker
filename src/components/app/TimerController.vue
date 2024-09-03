@@ -45,11 +45,22 @@ export default {
 
 <template>
   <TimerClock :timer="timer" />
-  <ActionButton v-if="isRunning" variant="secondary" :disabled="disabled" @click="stopTimer">
+  <ActionButton
+    v-if="isRunning"
+    class="w-24"
+    variant="destructive"
+    :disabled="disabled"
+    @click="stopTimer"
+  >
     <Square :size="16" />
     Parar
   </ActionButton>
-  <ActionButton v-else variant="primary" @click="startTimer">
+  <ActionButton
+    v-else
+    class="w-24"
+    variant="primary"
+    @click="startTimer"
+  >
     <Play :size="16" />
     Iniciar
   </ActionButton>

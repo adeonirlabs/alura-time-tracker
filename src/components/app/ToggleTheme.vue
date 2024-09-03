@@ -23,10 +23,20 @@ export default {
 </script>
 
 <template>
-  <button v-if="isDarkMode" class="text-foreground" title="Mudar para o tema escuro" @click="toggleTheme">
+  <button
+    v-if="isDarkMode"
+    class="text-foreground"
+    title="Mudar para o tema escuro"
+    @click="toggleTheme"
+  >
     <Sun />
   </button>
-  <button v-else class="text-foreground/70" title="Mudar para o tema claro" @click="toggleTheme">
+  <button
+    v-else
+    class="text-foreground/70"
+    title="Mudar para o tema claro"
+    @click="toggleTheme"
+  >
     <Moon />
   </button>
 </template>

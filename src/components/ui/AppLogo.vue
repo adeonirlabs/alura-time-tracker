@@ -5,17 +5,48 @@ export default {
 </script>
 
 <template>
-  <!-- eslint-disable vue/max-attributes-per-line -->
-  <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 286 129">
-    <path fill="#fff" d="M0 0h286v129H0z" />
-    <mask id="a" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="12" y="12" width="105" height="105">
-      <circle cx="64.5" cy="64.5" r="52.5" fill="#444" />
+  <svg
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 286 129"
+  >
+    <path
+      fill="#fff"
+      d="M0 0h286v129H0z"
+    />
+    <mask
+      id="a"
+      style="mask-type: alpha"
+      maskUnits="userSpaceOnUse"
+      x="12"
+      y="12"
+      width="105"
+      height="105"
+    >
+      <circle
+        cx="64.5"
+        cy="64.5"
+        r="52.5"
+        fill="#444"
+      />
     </mask>
     <g mask="url(#a)">
-      <path fill="#FDDB8A" d="M-21 29.271 88.38-15l14.632 36.15-109.38 44.272z" />
-      <path fill="#FCC34F" d="m-6.368 65.422 109.38-44.271 13.718 33.89L7.35 99.314z" />
+      <path
+        fill="#FDDB8A"
+        d="M-21 29.271 88.38-15l14.632 36.15-109.38 44.272z"
+      />
+      <path
+        fill="#FCC34F"
+        d="m-6.368 65.422 109.38-44.271 13.718 33.89L7.35 99.314z"
+      />
     </g>
-    <circle cx="64.5" cy="64.5" r="49.5" stroke="#3F3F46" stroke-width="6" />
+    <circle
+      cx="64.5"
+      cy="64.5"
+      r="49.5"
+      stroke="#3F3F46"
+      stroke-width="6"
+    />
     <path
       d="M56.015 45.165H31.024l33.975 58.514 33.976-58.514H73.983l-7.976 13.738-1.008 1.735-1.007-1.735-7.977-13.738Z"
       stroke="#3F3F46"

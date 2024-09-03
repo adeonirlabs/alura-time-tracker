@@ -17,5 +17,7 @@ export default {
 </script>
 
 <template>
-  <p class="w-[68px] font-medium text-foreground">{{ formattedTimer }}</p>
+  <p class="w-[68px] font-medium text-foreground">
+    {{ formattedTimer }}
+  </p>
 </template>
